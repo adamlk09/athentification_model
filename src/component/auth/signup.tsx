@@ -12,7 +12,11 @@ const Signup: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Signup attempt', { firstName, lastName, email, password, confirmPassword });
+    if (password !== confirmPassword) {
+      console.log('Passwords do not match');
+    } else {
+      console.log('Signup attempt', { firstName, lastName, email, password });
+    }
   };
 
   return (
@@ -56,7 +60,7 @@ const Signup: React.FC = () => {
             <label htmlFor="password">Mot de passe</label>
             <div className="password-input">
               <input
-                type={showPassword ? "text" : "password"}
+                type={showPassword ? 'text' : 'password'}
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -74,7 +78,7 @@ const Signup: React.FC = () => {
             <label htmlFor="confirmPassword">Confirmer le mot de passe</label>
             <div className="password-input">
               <input
-                type={showConfirmPassword ? "text" : "password"}
+                type={showConfirmPassword ? 'text' : 'password'}
                 id="confirmPassword"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}

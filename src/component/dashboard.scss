@@ -1,0 +1,118 @@
+.table-container {
+    background-color: rgb(255, 255, 255);
+    margin: auto ;
+    padding: 42px 16px;
+    width: 100%;
+.retour-bar{
+ display: flex;
+ justify-content: flex-end;
+ margin-bottom: 12px;
+
+    .btn-retour {
+        padding: 5px 10px;
+
+        background-color: #198754;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: darken(#198754, 10%);
+        }
+    }
+
+    .btn-retour {
+        background-color: #8b4513;
+
+        &:hover {
+            background-color: darken(#8b4513, 10%);
+        }
+    }}
+    .header-actions {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        
+        margin-bottom: 20px;
+.test{
+
+
+        .input-category {
+            width: 200px;
+            padding: 5px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+
+        .btn,
+        .btn-retour {
+            padding: 5px 10px;
+            background-color: #198754;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: darken(#198754, 10%);
+            }
+        }
+
+        .btn-retour {
+            background-color: #8b4513;
+
+            &:hover {
+                background-color: darken(#8b4513, 10%);
+            }
+        }
+    }}
+
+    .category-table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+            border-left: solid 1px darken($color: #888585, $amount: 00.3s) ;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2d3f52d1;
+        }
+
+        td {
+            vertical-align: middle;
+        }
+
+        .action-btn {
+            width: 35px;
+            height: 35px;
+            margin: 0 5px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .edit-btn {
+            background-color: #198754;
+
+            &:hover {
+                background-color: darken(#198754, 10%);
+            }
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+
+            &:hover {
+                background-color: #dc354696;
+            }
+        }
+    }
+}

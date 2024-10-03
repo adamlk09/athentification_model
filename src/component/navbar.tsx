@@ -5,10 +5,9 @@ import './navbar.scss';
 const Navbar: React.FC = () => {
   return (
     <nav>
-      <Link to="/">Home</Link>
-      <Link to="/login">Login</Link>
-      <Link to="/signup">Sign Up</Link>
-     
+      <Link to="/dashboard">Dashboard</Link>
+      <Link to="/">Login</Link>
+      <Link to="/signup">Signup</Link>
     </nav>
   );
 };

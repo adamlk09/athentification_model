@@ -4,17 +4,17 @@ import Home from './component/home';
 import Login from './component/auth/login';
 import Signup from './component/auth/signup';
 import Navbar from './component/navbar';
+import Dashboard from './component/dashboard';
 import './App.scss';
-import "./style/main.scss";
-
+import './style/main.scss';
 
 const App: React.FC = () => {
   return (
     <Router>
-      <Navbar />
+      
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
     </Router>

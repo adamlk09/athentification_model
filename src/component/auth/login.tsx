@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './login.scss';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Login attempt', { email, password });
+
+    // Example of basic authentication logic
+    if (email === 'test@example.com' && password === 'password') {
+      navigate('/dashboard');
+    } else {
+      setError('Adresse e-mail ou mot de passe incorrect');
+    }
   };
 
   return (
@@ -30,13 +39,13 @@ const Login: React.FC = () => {
             <label htmlFor="password">Mot de passe</label>
             <div className="password-input">
               <input
-                type={showPassword ? "text" : "password"}
+                type={showPassword ? 'text' : 'password'}
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <span 
+              <span
                 className="password-toggle"
                 onClick={() => setShowPassword(!showPassword)}
               >
@@ -44,6 +53,7 @@ const Login: React.FC = () => {
               </span>
             </div>
           </div>
+          {error && <p className="error-message">{error}</p>}
           <button type="submit" className="submit-btn">Se connecter</button>
         </form>
         <div className="auth-links">
