@@ -1,0 +1,32 @@
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    align-items: center;
+   color: #513921f1;
+    padding: 1rem 2rem;
+  
+    a {
+      color: rgb(70, 53, 28);
+      text-decoration:underline;
+      font-size: 1.1rem;
+      margin: 0 1rem;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: #bc862f;
+      }
+  
+      &:active {
+        color: #f0e6ea;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+      a {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+  
